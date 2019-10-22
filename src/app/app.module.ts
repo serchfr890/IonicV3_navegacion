@@ -36,7 +36,7 @@ import {Ajustes2Page,
     ModalPage, 
     Pagina2Page, 
     Pagina3Page, 
-    PrincipalPage, 
+    PrincipalPage,
     TabsPage
   ],
   providers: [

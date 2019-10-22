@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavParams, NavController } from 'ionic-angular';
 
 /**
  * Generated class for the Pagina3Page page.
@@ -8,18 +8,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-pagina3',
   templateUrl: 'pagina3.html',
 })
 export class Pagina3Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  mutante:any = {};
+  constructor(private navParams: NavParams, private navCtrl:NavController) {
+    console.log('pagina3: ', this.navParams.get('mutante'));
+    this.mutante = this.navParams.get('mutante');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Pagina3Page');
+  irAtras() {
+    this.navCtrl.pop();
   }
 
+  irRoot() {
+    this.navCtrl.popToRoot();
+  }
 }
