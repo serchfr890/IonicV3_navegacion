@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { Pagina2Page } from '../index.paginas'
 
 @Component({
@@ -9,7 +9,7 @@ import { Pagina2Page } from '../index.paginas'
 export class PrincipalPage {
 
   pagina2:any = Pagina2Page;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private menuCtrl:MenuController) {
   }
 
   navegar_pagina() {
